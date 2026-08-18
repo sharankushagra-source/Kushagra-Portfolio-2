@@ -638,7 +638,36 @@ body.loading{ overflow:hidden; }
 .jrny__trail-prog{ stroke:url(#jgrad); stroke-width:4; stroke-linecap:round; filter:drop-shadow(0 0 6px color-mix(in srgb, var(--magenta) 45%, transparent)); transition:stroke-dashoffset .15s linear; }
 
 .jrny__list{ list-style:none; margin:0; padding:0; position:relative; z-index:1;
-  display:flex; flex-direction:column; gap:clamp(128px,21vh,260px); }
+  display:flex; flex-direction:column; gap:clamp(28px,4vh,56px); }
+.jrny__dots{ display:flex; justify-content:center; }
+.jrny__dots-line{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+  width:2px; height:clamp(64px,11vh,140px); }
+.jrny__dots-line i{ display:block; width:3px; height:3px; border-radius:50%; background:transparent;
+  transition:background .3s ease, box-shadow .3s ease, transform .3s cubic-bezier(.34,1.56,.64,1); }
+.jrny__dots.is-active .jrny__dots-line i{ background:#E01E8F; box-shadow:0 0 6px color-mix(in srgb, #E01E8F 60%, transparent); transform:scale(1.4); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(1){ transition-delay:0s; background:#6522E0; box-shadow:0 0 6px color-mix(in srgb, #6522E0 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(2){ transition-delay:.05s; background:#7A2FD8; box-shadow:0 0 6px color-mix(in srgb, #7A2FD8 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(3){ transition-delay:.10s; background:#8E3BCF; box-shadow:0 0 6px color-mix(in srgb, #8E3BCF 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(4){ transition-delay:.15s; background:#A247C6; box-shadow:0 0 6px color-mix(in srgb, #A247C6 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(5){ transition-delay:.20s; background:#B653BD; box-shadow:0 0 6px color-mix(in srgb, #B653BD 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(6){ transition-delay:.25s; background:#C25FB0; box-shadow:0 0 6px color-mix(in srgb, #C25FB0 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(7){ transition-delay:.30s; background:#CE5AA0; box-shadow:0 0 6px color-mix(in srgb, #CE5AA0 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(8){ transition-delay:.35s; background:#DA4B95; box-shadow:0 0 6px color-mix(in srgb, #DA4B95 60%, transparent); }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(9){ transition-delay:.40s; }
+.jrny__dots.is-active .jrny__dots-line i:nth-child(10){ transition-delay:.45s; }
+
+.jrny__more .jrny__dots-line{ margin:0 auto 16px; height:64px; }
+.jrny__more.is-active .jrny__dots-line i{ background:#E01E8F; box-shadow:0 0 6px color-mix(in srgb, #E01E8F 60%, transparent); transform:scale(1.4); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(1){ transition-delay:0s; background:#6522E0; box-shadow:0 0 6px color-mix(in srgb, #6522E0 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(2){ transition-delay:.05s; background:#7A2FD8; box-shadow:0 0 6px color-mix(in srgb, #7A2FD8 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(3){ transition-delay:.10s; background:#8E3BCF; box-shadow:0 0 6px color-mix(in srgb, #8E3BCF 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(4){ transition-delay:.15s; background:#A247C6; box-shadow:0 0 6px color-mix(in srgb, #A247C6 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(5){ transition-delay:.20s; background:#B653BD; box-shadow:0 0 6px color-mix(in srgb, #B653BD 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(6){ transition-delay:.25s; background:#C25FB0; box-shadow:0 0 6px color-mix(in srgb, #C25FB0 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(7){ transition-delay:.30s; background:#CE5AA0; box-shadow:0 0 6px color-mix(in srgb, #CE5AA0 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(8){ transition-delay:.35s; background:#DA4B95; box-shadow:0 0 6px color-mix(in srgb, #DA4B95 60%, transparent); }
+.jrny__more.is-active .jrny__dots-line i:nth-child(9){ transition-delay:.40s; }
+.jrny__more.is-active .jrny__dots-line i:nth-child(10){ transition-delay:.45s; }
 .jstep{ text-align:center; }
 /* children reveal one-by-one when the travelling glow reaches the pin */
 .jstep__when, .jstep__role, .jstep__org{ opacity:0; transform:translateY(20px);
@@ -676,11 +705,10 @@ body.loading{ overflow:hidden; }
 .jstep.is-active .jstep__keys li:nth-child(8){ transition-delay:1.05s; }
 
 /* ongoing — the route continues past the last milestone */
-.jrny__more{ text-align:center; margin-top:clamp(48px,8vh,100px); opacity:0; transform:translateY(20px);
+.jrny__more{ text-align:center; margin-top:clamp(28px,4vh,56px); opacity:0; transform:translateY(20px);
   transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
 .jrny__more.is-active{ opacity:1; transform:none; }
-.jrny__more-line{ display:block; width:2px; height:64px; margin:0 auto 16px;
-  background:repeating-linear-gradient(to bottom, rgba(241,238,231,.42) 0 2px, transparent 2px 11px); }
+
 .jrny__more-dot{ display:block; width:14px; height:14px; border-radius:50%; margin:0 auto 18px; border:2px solid var(--magenta); animation:jpulse2 1.9s ease-out infinite; }
 .jrny__more p{ margin:0; font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:rgba(241,238,231,.5); }
 @keyframes jpulse2{ 0%{ box-shadow:0 0 0 0 color-mix(in srgb, var(--magenta) 45%, transparent); } 70%,100%{ box-shadow:0 0 0 12px transparent; } }
@@ -689,7 +717,7 @@ body.loading{ overflow:hidden; }
 .reduced .jrny__more{ opacity:1; transform:none; }
 .jrny--measuring .jstep__pin{ transform:none !important; transition:none !important; }
 .reduced .jstep__keys li{ opacity:1; transform:none; }
-@media (max-width:680px){ .jrny__list{ gap:96px; } .jstep__pin{ width:46px; height:46px; } }
+@media (max-width:680px){ .jrny__list{ gap:24px; } .jstep__pin{ width:46px; height:46px; } .jrny__dots-line{ height:56px; } }
 
 /* ============================================================
    MOBILE REFINEMENTS (placed last so they win the cascade)

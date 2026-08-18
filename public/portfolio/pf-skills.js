@@ -49,14 +49,9 @@
       if (s.inf < 0.008) s.inf = 0;
 
       if (s.inf === 0) {
-        t.style.transform = '';
-        t.style.transformOrigin = '';
         s.el.style.zIndex = '';
         continue;
       }
-      /* stretch anchored at a fixed left origin (never pointer-based) — scaling only ever grows rightward, so long labels can't push past the left edge */
-      t.style.transformOrigin = '0% 50%';
-      t.style.transform = 'scale(' + (1 + s.inf * GROW).toFixed(3) + ')';
       s.el.style.zIndex = 6;
     }
   }

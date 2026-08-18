@@ -99,16 +99,15 @@
   .nav__logo .logoword{ font-family:var(--sans); font-weight:800; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; }
 
   /* ===== HERO (positioning version) ===== */
-  .phero{ position:relative; z-index:1; min-height:100svh; display:flex; align-items:center; padding:clamp(160px,20vh,240px) 0 clamp(70px,10vh,130px); }
-  .phero__eyebrow{ display:inline-flex; align-items:center; gap:11px; margin-bottom:clamp(22px,3vh,34px); color:var(--accent2); font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; }
+  .phero{ position:relative; z-index:1; min-height:100svh; display:flex; align-items:center; justify-content:center; text-align:center; padding:clamp(160px,20vh,240px) 0 clamp(70px,10vh,130px); }
+  .phero__eyebrow{ display:inline-flex; align-items:center; gap:11px; margin:0 auto clamp(22px,3vh,34px); color:var(--fg); font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; }
   .phero__eyebrow .d{ width:9px; height:9px; border-radius:50%; background:var(--hot); }
-  .phero__intro{ max-width:none; }
-  .phero__line{ font-family:var(--disp); font-weight:600; font-size:clamp(26px,3vw,46px); line-height:1.14; letter-spacing:-0.022em; margin:0 0 clamp(24px,3vh,38px); max-width:none; text-wrap:pretty; }
-  .phero__line b{ color:var(--hot); font-weight:600; }
-  .phero__line em{ color:var(--hot); font-weight:600; font-style:normal; }
-  .phero__line a{ color:inherit; text-decoration:none; box-shadow:inset 0 -2px 0 color-mix(in srgb, var(--hot) 55%, transparent); transition:box-shadow .25s, color .25s; }
-  .phero__line a:hover{ color:var(--hot); box-shadow:inset 0 -3px 0 var(--hot); }
-  .phero__note{ margin:0; max-width:none; font-size:clamp(15px,1.2vw,18px); line-height:1.6; color:color-mix(in srgb, var(--fg) 58%, transparent); }
+  .phero__intro{ max-width:none; margin-inline:auto; display:flex; flex-direction:column; align-items:center; }
+  .phero__q{ font-family:var(--quote); font-style:normal; line-height:1.08; letter-spacing:-0.01em; font-size:clamp(40px,5.6vw,68px); margin:0 0 clamp(20px,2.6vh,28px); max-width:21ch; color:var(--fg); }
+  .phero__q em{ font-style:italic; color:var(--accent2); }
+  .phero__lead{ font-family:var(--disp); font-weight:700; letter-spacing:-0.015em; line-height:1.3; font-size:clamp(22px,2vw,28px); color:var(--fg); margin:0 0 clamp(18px,2.2vh,24px); max-width:52ch; }
+  .phero__stats{ font-family:var(--sans); font-weight:500; font-size:clamp(17px,1.3vw,19px); color:color-mix(in srgb, var(--fg) 70%, transparent); margin:0; }
+  .phero__stats b{ color:var(--hot); font-weight:700; }
 
   /* ===== WORK cards (positioning version) ===== */
   .pwork__stack{ display:flex; flex-direction:column; gap:clamp(28px,4.5vh,56px); }
@@ -196,11 +195,12 @@
 
 <!-- ============ HERO (positioning version) ============ -->
 <header class="phero" id="top">
-  <div class="wrap">
+  <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
     <span class="phero__eyebrow"><span class="d"></span> New Delhi</span>
     <div class="phero__intro">
-      <p class="phero__line">I'm a <em>Product <span style="color:var(--fg)">&amp;</span> design systems designer</em>. Engineer-minded, &amp; fast to ship. With 3 years of experience across <em>SaaS</em> and platform tools for <em>enterprises</em>. I lead end-to-end design for <a href="Case Study - Factile (scroll).html">Factile</a> (<b>2M+ users</b>) at Deligence Technologies.</p>
-      <p class="phero__note">Before this, I was working on web design across e-commerce, healthcare, and logistics. Skilled in creating user-centered, Web/Mobile-first, and WCAG-compliant interfaces.</p>
+      <p class="phero__q">I design <em>products</em> and the systems behind them.</p>
+      <p class="phero__lead">Product Designer with an engineering mindset, designing SaaS and platform experiences across UX, interaction, and design systems.</p>
+      <p class="phero__stats"><b>3</b> years &nbsp;·&nbsp; <b>2M+</b> users &nbsp;·&nbsp; <b>24</b>-component system &nbsp;·&nbsp; WCAG AA/AAA</p>
     </div>
   </div>
 </header>
@@ -218,7 +218,7 @@
   <div class="wrap">
     <div class="pwork__stack">
       <article class="wcard">
-        <a class="wcard__media" href="Case Study - Factile (scroll).html" data-view="Explore" aria-label="Open the Factile Customize case study">
+        <a class="wcard__media" href="factile-case-study.html" data-view="Explore" aria-label="Open the Factile Customize case study">
           <span class="workfeat__art workfeat__art--factile" role="img" aria-label="Abstract illustration — the Factile customize flow, untangled from overloaded settings into a clear, guided experience"></span>
         </a>
         <div class="wcard__intro">
@@ -234,7 +234,7 @@
         </div>
         <div class="wcard__lower">
           <div class="wcard__foot">
-            <a class="wcard__cta" href="Case Study - Factile (scroll).html" data-view="Explore">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+            <a class="wcard__cta" href="factile-case-study.html" data-view="Explore">Read the case study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
           </div>
         </div>
       </article>
@@ -314,7 +314,6 @@
       <p class="lab" style="max-width:36ch">A path, not a résumé — from first principles to shipping product. Scroll to travel the route.</p>
     </div>
     <div class="jrny__map" data-journey>
-      <svg class="jrny__trail" aria-hidden="true"><defs><linearGradient id="jgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6522E0"/><stop offset="1" stop-color="#E01E8F"/></linearGradient></defs><path class="jrny__trail-base"></path><path class="jrny__trail-prog"></path></svg>
       <ol class="jrny__list">
         <li class="jstep" data-step>
           <div class="jstep__pin">01</div>
@@ -325,6 +324,9 @@
             <li>Sketching</li><li>Close observation</li><li>Art &amp; crafts</li><li>First-principles thinking</li><li>Curiosity</li>
           </ul>
         </li>
+        <li class="jrny__dots" aria-hidden="true"><span class="jrny__dots-line">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </span></li>
         <li class="jstep" data-step>
           <div class="jstep__pin">02</div>
           <div class="jstep__when">Aug 2023 — Oct 2025</div>
@@ -334,6 +336,9 @@
             <li>Flows &amp; wireframes</li><li>Hi-fi UI</li><li>E-commerce</li><li>Healthcare</li><li>Logistics</li><li>BundleSuite · Shopify</li><li>Concept → handoff</li><li>Dev collaboration</li>
           </ul>
         </li>
+        <li class="jrny__dots" aria-hidden="true"><span class="jrny__dots-line">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </span></li>
         <li class="jstep" data-step>
           <div class="jstep__pin">03</div>
           <div class="jstep__when">Oct 2025 — Present · Now</div>
@@ -345,7 +350,7 @@
         </li>
       </ol>
       <div class="jrny__more" aria-hidden="true">
-        <span class="jrny__more-line"></span>
+        <span class="jrny__dots-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
         <span class="jrny__more-dot"></span>
         <p>The journey is still on — more adventures ahead</p>
       </div>
@@ -423,8 +428,8 @@
         <a href="#top">Available for roles</a>
       </div>
     </div>
-    <a class="foot__kit" href="Facets UI Kit.html" data-view="Explore">
-      <span class="foot__kit-t">UI Facets Kit <span aria-hidden="true">↗</span></span>
+    <a class="foot__kit" href="portfolio-ui-kit.html" data-view="Explore">
+      <span class="foot__kit-t">UI Kit <span aria-hidden="true">↗</span></span>
     </a>
     <div class="foot">
       <span>© <span id="year">2025</span> Kushagra Sharan</span>
@@ -505,7 +510,7 @@
 <script src="portfolio/pf-skillmodal.js"></script>
 <script src="portfolio/pf-collage.js"></script>
 <script src="portfolio/pf-journey.js"></script>
-<script src="portfolio/pf-sfx.js"></script>
+<script src="portfolio2026/pf-sfx.js"></script>
 <script>(function(){
   if(!window.KSSound) return;
   var btn = document.querySelector('.sfxbtn'); if(!btn) return;
@@ -536,10 +541,15 @@
   });
 })();</script>
 <script>(function(){
-  /* coming-soon marquee: meadow wind loops while hovered (respects the sound toggle) */
+  /* coming-soon marquee: CTA-click stinger — first hover plays once, every hover after plays twice */
   var soon = document.getElementById('soonMarquee'); if(!soon) return;
-  var play = function(){ if(window.KSSound && window.KSSound.isOn()) window.KSSound.loopStart('meadow', 1); };
-  var stop = function(){ if(window.KSSound) window.KSSound.loopStop(); };
+  var soonHovering = false;
+  var play = function(){
+    if (soonHovering) return;
+    soonHovering = true;
+    if(window.KSSound && window.KSSound.isOn()) window.KSSound.playOnce('cta-click', 1);
+  };
+  var stop = function(){ soonHovering = false; };
   soon.addEventListener('pointerenter', play);
   soon.addEventListener('pointerleave', stop);
   window.addEventListener('blur', stop);
