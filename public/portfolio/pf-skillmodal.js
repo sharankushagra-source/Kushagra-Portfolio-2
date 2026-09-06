@@ -2,11 +2,11 @@
 (function(){
   'use strict';
   var DATA = {
-    'UX Design':        { ey:'02', side:'right', brief:'End-to-end flows for Factile’s 2M+ users, from first draft to shipped feature.', stats:[ {f:'2M+', l:'users designed for on Factile'}, {f:'+22.5%', l:'new paid users'} ] },
-    'Design Systems':   { ey:'03', side:'right', brief:'A living component library that keeps every screen consistent as the product grows.', stats:[ {f:'24', l:'components in one system'}, {f:'100+', l:'design tokens'} ] },
+    'UX Design':        { ey:'02', side:'right', brief:'For me, UX is about translating offline behaviour, habits and patterns into digital journeys, staying close to how people already act.', outcome:'Anchoring to a real behavioural pattern won’t hold 100% of the time, but it lets me judge problems and ideas fundamentally, not cosmetically.' },
+    'Design Systems':   { ey:'03', side:'right', brief:'The moment you realise a small thing will need to scale, consistency only holds if there’s a system underneath it.', outcome:'So I start with rules and guidelines, then grow them into a system as the product does.' },
     'Problem Framing':  { ey:'01', side:'right', brief:'I ask why before how, then work back from the expected outcome, since that changes what form and function should be.', outcome:'A new-flow request is a symptom until proven otherwise, so I trace it upstream before sketching anything.' },
-    'Rapid Execution':  { ey:'04', side:'right', brief:'25+ flows shipped across Vesta in 6 months, without cutting craft.', stats:[ {f:'1,104', l:'screens across Vesta’s 3 roles'}, {f:'25+', l:'Vesta flows in 6 months'}, {f:'100+', l:'Factile screens'}, {f:'9+', l:'Factile flows'} ] },
-    'Communication':    { ey:'05', side:'right', brief:'Keeping engineering, PM, and founders aligned around one shared reason.', stats:[ {f:'4', l:'juniors mentored'}, {f:'Eng · PM · Founders', l:'aligned around one shared “why”'} ] }
+    'Rapid Execution':  { ey:'04', side:'right', brief:'I built a design system in Claude that lets me produce screens, flows and even nuanced feedback fast.', outcome:'It speeds up interactive ideas, and shipping them keeps making the system better in return.' },
+    'Communication':    { ey:'05', side:'right', brief:'I’m more about why and how than what, why something needs doing, and how it’s planned.', outcome:'I want to understand the reasoning with the team before we commit to building anything.' }
   };
   var modal = document.getElementById('skmodal');
   if(!modal) return;

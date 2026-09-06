@@ -9,6 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="portfolio/facets.css" />
 <link rel="stylesheet" href="portfolio/facets-kit.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" />
+<style>
+  /* Portfolio 2026 typeface: Instrument Sans replaces Bricolage (display) + Archivo (body); Instrument Serif stays the editorial voice */
+  :root{ --disp:'Instrument Sans', system-ui, -apple-system, sans-serif; --sans:'Instrument Sans', system-ui, -apple-system, sans-serif; --quote:'Instrument Serif', Georgia, serif; }
+</style>
 </head>
 <body class="kit motion">
 
@@ -39,7 +44,7 @@
       </div>
       <div>
         <span class="lab">Built on</span>
-        <p>Bricolage Grotesque (display) · Instrument Serif (the questions) · Archivo (everything functional). Ink&nbsp;#100D08, Paper&nbsp;#F1EEE7.</p>
+        <p>Instrument Sans (display &amp; working voice) &middot; Instrument Serif (the questions). Ink&nbsp;#100D08, Paper&nbsp;#F1EEE7.</p>
       </div>
     </div>
   </div>
@@ -143,21 +148,20 @@
 
     <div class="block">
       <div class="families">
-        <div class="fam fam--disp"><div class="fam__glyph">Ag</div><div class="fam__name">Bricolage Grotesque</div><div class="fam__role">Display — names, section heads, workrow titles.</div><div class="fam__weights">Weights 400 – 800 · tight tracking</div></div>
+        <div class="fam fam--disp"><div class="fam__glyph">Ag</div><div class="fam__name">Instrument Sans</div><div class="fam__role">Display &amp; working voice — names, section heads, titles, body, labels, chips, nav, meta.</div><div class="fam__weights">Weights 400 – 700 · tight tracking</div></div>
         <div class="fam fam--quote"><div class="fam__glyph">Ag</div><div class="fam__name">Instrument Serif</div><div class="fam__role">The questions — big editorial serif, italic for emphasis.</div><div class="fam__weights">Regular &amp; Italic</div></div>
-        <div class="fam fam--sans"><div class="fam__glyph">Ag</div><div class="fam__name">Archivo</div><div class="fam__role">Working voice — body, labels, chips, nav, meta.</div><div class="fam__weights">Weights 400 – 700</div></div>
       </div>
     </div>
 
     <div class="block">
       <div class="subh"><h3>Type scale</h3><span class="rule"></span></div>
       <div class="scale">
-        <div class="scale__row"><div class="scale__spec"><b>Display</b>Bricolage · 700</div><div class="scale__ex"><div class="ex-h1">Kushagra <em>Sharan.</em></div></div></div>
-        <div class="scale__row"><div class="scale__spec"><b>Question</b>Instrument · 400</div><div class="scale__ex"><div class="ex-q">Can you <em>do</em> it?</div></div></div>
-        <div class="scale__row"><div class="scale__spec"><b>Heading</b>Bricolage · 700</div><div class="scale__ex"><div class="ex-h2">Selected work.</div></div></div>
-        <div class="scale__row"><div class="scale__spec"><b>Lead</b>Bricolage · 700</div><div class="scale__ex"><div class="ex-lead">The one who looks until he actually sees.</div></div></div>
-        <div class="scale__row"><div class="scale__spec"><b>Body</b>Archivo · 500</div><div class="scale__ex"><div class="ex-body">Ten thousand lines to draw one face. I approach a product the same way — <b>watching how real people struggle</b> before I touch a single screen.</div></div></div>
-        <div class="scale__row"><div class="scale__spec"><b>Label</b>Archivo · 700</div><div class="scale__ex"><div class="ex-lab">Product Designer &amp; Illustrator</div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Display</b>Instrument Sans · 700</div><div class="scale__ex"><div class="ex-h1">Kushagra <em>Sharan.</em></div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Question</b>Instrument Serif · 400</div><div class="scale__ex"><div class="ex-q">Can you <em>do</em> it?</div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Heading</b>Instrument Sans · 700</div><div class="scale__ex"><div class="ex-h2">Selected work.</div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Lead</b>Instrument Sans · 700</div><div class="scale__ex"><div class="ex-lead">The one who looks until he actually sees.</div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Body</b>Instrument Sans · 500</div><div class="scale__ex"><div class="ex-body">Ten thousand lines to draw one face. I approach a product the same way — <b>watching how real people struggle</b> before I touch a single screen.</div></div></div>
+        <div class="scale__row"><div class="scale__spec"><b>Label</b>Instrument Sans · 700</div><div class="scale__ex"><div class="ex-lab">Product Designer &amp; Illustrator</div></div></div>
       </div>
     </div>
   </div>
@@ -188,11 +192,11 @@
       <div class="subh"><h3>Theme toggle &amp; capture pill</h3><span class="rule"></span><span class="subh__hint">new · kit v2</span></div>
       <div class="demo">
         <div style="display:inline-flex;gap:2px;padding:4px;border-radius:100px;border:1.5px solid rgba(241,238,231,.2);background:rgba(16,13,8,.72);align-items:center">
-          <a href="#components" onclick="return false" style="display:inline-flex;align-items:center;font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border-radius:100px;color:rgba(241,238,231,.7);text-decoration:none">UI Facets Kit</a>
-          <button type="button" style="font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border:none;border-radius:100px;background:#E01E8F;color:#fff;cursor:pointer">Dark</button>
-          <button type="button" style="font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border:none;border-radius:100px;background:none;color:rgba(241,238,231,.58);cursor:pointer">Light</button>
+          <a href="#components" onclick="return false" style="display:inline-flex;align-items:center;font-family:'Instrument Sans',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border-radius:100px;color:rgba(241,238,231,.7);text-decoration:none">UI Facets Kit</a>
+          <button type="button" style="font-family:'Instrument Sans',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border:none;border-radius:100px;background:#E01E8F;color:#fff;cursor:pointer">Dark</button>
+          <button type="button" style="font-family:'Instrument Sans',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 15px;border:none;border-radius:100px;background:none;color:rgba(241,238,231,.58);cursor:pointer">Light</button>
         </div>
-        <button type="button" style="font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;border:none;border-radius:100px;background:#E01E8F;color:#fff;cursor:pointer;box-shadow:0 18px 36px -14px rgba(224,30,143,.6)">Capture · Download</button>
+        <button type="button" style="font-family:'Instrument Sans',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:13px 24px;border:none;border-radius:100px;background:#E01E8F;color:#fff;cursor:pointer;box-shadow:0 18px 36px -14px rgba(224,30,143,.6)">Capture · Download</button>
       </div>
       <p class="cap">The fixed top-right control group — kit link + segmented theme toggle — and the sketchbook's capture pill: one press renders the visitor's collage as terminal-green ASCII art and downloads it. The full-page morphing grid (see the portfolio hero) replaces static wall grids in Kit v2.</p>
     </div>
@@ -211,9 +215,9 @@
           mask:url(portfolio/img/design-system-abstract.svg) center/contain no-repeat;
           transition:background .4s, transform .6s cubic-bezier(.16,1,.3,1); }
         .kit-flag:hover .kit-flag__art{ background:#E01E8F; transform:scale(1.03); }
-        .kit-flag__t{ font-family:'Bricolage Grotesque', system-ui, sans-serif; font-weight:700; font-size:clamp(26px,3vw,40px); line-height:.94; letter-spacing:-.03em; margin:12px 0 0; transition:color .3s; }
+        .kit-flag__t{ font-family:'Instrument Sans', system-ui, sans-serif; font-weight:700; font-size:clamp(26px,3vw,40px); line-height:.94; letter-spacing:-.03em; margin:12px 0 0; transition:color .3s; }
         .kit-flag:hover .kit-flag__t{ color:#E01E8F; }
-        .kit-flag__explore{ display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:Archivo,system-ui,sans-serif; font-weight:800; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#E01E8F; }
+        .kit-flag__explore{ display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:'Instrument Sans',system-ui,sans-serif; font-weight:800; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#E01E8F; }
       </style>
       <div class="kit-flag">
         <div class="kit-flag__media"><span class="kit-flag__art" role="img" aria-label="Tokens combining into components and screens"></span></div>
@@ -234,7 +238,7 @@
         <div class="chap" style="--hot:#E01E8F;color:var(--paper)"><span class="chap__n">I</span><span class="chap__rule"></span><span class="chap__t">The Observer</span></div>
         <div class="chap" style="--hot:#7CF03A;color:var(--paper)"><span class="chap__n">III</span><span class="chap__rule"></span><span class="chap__t">The Executor</span></div>
       </div>
-      <p class="cap">Micro-label <code>.lab</code>: Archivo 700, tracked 0.16em, uppercase. Chapter marker pairs a roman numeral (in <code>--hot</code>) with a rule and a tracked title.</p>
+      <p class="cap">Micro-label <code>.lab</code>: Instrument Sans 700, tracked 0.16em, uppercase. Chapter marker pairs a roman numeral (in <code>--hot</code>) with a rule and a tracked title.</p>
     </div>
 
     <!-- CRAFT CHIPS -->
@@ -276,7 +280,7 @@
           </a>
         </div>
       </div>
-      <p class="cap">Big Bricolage titles on hairline rows. Hover slides the row right, colors the title <code>--hot</code>, and rotates the arrow node.</p>
+      <p class="cap">Big Instrument Sans titles on hairline rows. Hover slides the row right, colors the title <code>--hot</code>, and rotates the arrow node.</p>
     </div>
 
     <!-- SECTION HEAD -->
@@ -286,7 +290,7 @@
         <h2>Selected <em>work</em>.</h2>
         <p>Four things I've shipped end to end. Hover to see them.</p>
       </div>
-      <p class="cap">Oversized Bricolage title with an italic Instrument word in <code>--hot</code>, balanced by a quiet supporting line.</p>
+      <p class="cap">Oversized Instrument Sans title with an italic Instrument Serif word in <code>--hot</code>, balanced by a quiet supporting line.</p>
     </div>
 
     <!-- NAV + INDEX -->
@@ -332,13 +336,13 @@
       <div class="subh"><h3>Strength stat overlay</h3><span class="rule"></span><span class="subh__hint">hover a strength · edge-anchored</span></div>
       <div class="demo" style="justify-content:flex-start">
         <div style="position:relative;width:min(520px,100%);background:#100D08;border:1px solid rgba(241,238,231,.15);border-radius:24px;padding:34px">
-          <span style="display:block;font-family:'Archivo',sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;color:#E01E8F">05</span>
-          <h4 style="margin:8px 0 22px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:42px;line-height:1;letter-spacing:-.03em;color:#F1EEE7">Rapid Execution</h4>
+          <span style="display:block;font-family:'Instrument Sans',sans-serif;font-size:12px;font-weight:800;letter-spacing:.16em;color:#E01E8F">05</span>
+          <h4 style="margin:8px 0 22px;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:42px;line-height:1;letter-spacing:-.03em;color:#F1EEE7">Rapid Execution</h4>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">1,104</span><span style="display:block;margin-top:10px;font-family:'Archivo',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">screens across Vesta’s 3 roles</span></div>
-            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">25+</span><span style="display:block;margin-top:10px;font-family:'Archivo',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Vesta flows in 6 months</span></div>
-            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">100+</span><span style="display:block;margin-top:10px;font-family:'Archivo',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Factile screens</span></div>
-            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">9+</span><span style="display:block;margin-top:10px;font-family:'Archivo',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Factile flows</span></div>
+            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">1,104</span><span style="display:block;margin-top:10px;font-family:'Instrument Sans',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">screens across Vesta’s 3 roles</span></div>
+            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">25+</span><span style="display:block;margin-top:10px;font-family:'Instrument Sans',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Vesta flows in 6 months</span></div>
+            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">100+</span><span style="display:block;margin-top:10px;font-family:'Instrument Sans',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Factile screens</span></div>
+            <div style="border:1px solid rgba(241,238,231,.12);border-radius:16px;padding:20px 18px;background:rgba(241,238,231,.04)"><span style="display:block;font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:40px;line-height:.94;letter-spacing:-.03em;color:#E01E8F">9+</span><span style="display:block;margin-top:10px;font-family:'Instrument Sans',sans-serif;font-size:13px;line-height:1.45;color:rgba(241,238,231,.7)">Factile flows</span></div>
           </div>
         </div>
       </div>
@@ -353,7 +357,7 @@
           sharan.kushagra@gmail.com
         </a>
       </div>
-      <p class="cap">A large Bricolage mailto paired with a <code>--hot</code> circle that rotates its arrow on hover.</p>
+      <p class="cap">A large Instrument Sans mailto paired with a <code>--hot</code> circle that rotates its arrow on hover.</p>
     </div>
   </div>
 </section>
@@ -362,7 +366,7 @@
 <div class="wrap">
   <div class="kfoot">
     <span>UI Kit — v2 · theme toggle, capture pill &amp; full-page morph grid</span>
-    <span><a href="/#work">← Back to the portfolio</a></span>
+    <span><a href="index.html">← Back to the portfolio</a></span>
   </div>
 </div>
 
