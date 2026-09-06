@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" />
 <link rel="stylesheet" href="portfolio/pf-facets.css" />
 <script>(function(){try{var t=localStorage.getItem('pf-facets-theme'); if(t==='dark'){/* keep dark */}else{document.documentElement.classList.add('theme-light');}}catch(e){document.documentElement.classList.add('theme-light');}})();</script>
 <template id="__bundler_thumbnail">
@@ -34,7 +35,9 @@
   .sketch{ background:transparent; color:var(--fg); }
   .sketch .sechead__title{ color:var(--fg); }
   .sketch .lab{ color:color-mix(in srgb, var(--fg) 62%, transparent); }
-  .collage-frame{ background:transparent; box-shadow:none; z-index:0; }
+  .collage-frame{ background:transparent; box-shadow:none; border-color:transparent; z-index:0; }
+  .gallery--started .collage-frame{ border-color:transparent; }
+  .jrny__more p{ color:color-mix(in srgb, var(--fg) 55%, transparent); }
   .gallery__stack{ z-index:1; }
   .themebtn .kitlink{ display:inline-flex; align-items:center; font-family:var(--sans); font-weight:800; font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
     padding:8px 15px; border-radius:100px; color:color-mix(in srgb, var(--fg) 70%, transparent); text-decoration:none; transition:color .25s, background .25s; }
@@ -103,11 +106,15 @@
   .phero__eyebrow{ display:inline-flex; align-items:center; gap:11px; margin:0 auto clamp(22px,3vh,34px); color:var(--fg); font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; }
   .phero__eyebrow .d{ width:9px; height:9px; border-radius:50%; background:var(--hot); }
   .phero__intro{ max-width:none; margin-inline:auto; display:flex; flex-direction:column; align-items:center; }
-  .phero__q{ font-family:var(--quote); font-style:normal; line-height:1.08; letter-spacing:-0.01em; font-size:clamp(40px,5.6vw,68px); margin:0 0 clamp(20px,2.6vh,28px); max-width:21ch; color:var(--fg); }
+  .phero__q{ font-family:var(--quote); font-style:normal; line-height:1.06; letter-spacing:-0.01em; font-size:clamp(50px,8vw,114px); margin:0 0 clamp(20px,2.6vh,28px); max-width:22ch; color:var(--fg); text-wrap:balance; }
   .phero__q em{ font-style:italic; color:var(--accent2); }
   .phero__lead{ font-family:var(--disp); font-weight:700; letter-spacing:-0.015em; line-height:1.3; font-size:clamp(22px,2vw,28px); color:var(--fg); margin:0 0 clamp(18px,2.2vh,24px); max-width:52ch; }
   .phero__stats{ font-family:var(--sans); font-weight:500; font-size:clamp(17px,1.3vw,19px); color:color-mix(in srgb, var(--fg) 70%, transparent); margin:0; }
   .phero__stats b{ color:var(--hot); font-weight:700; }
+  /* Section + footer headers -> question style (Instrument Serif) at question size, keep white base + pink/purple em per theme */
+  .sechead__title, .contact__big{ font-family:var(--quote) !important; font-weight:400 !important; font-style:normal !important; font-size:clamp(40px,5.6vw,68px) !important; line-height:1.06 !important; letter-spacing:-0.01em !important; }
+  .contact__big{ font-size:clamp(44px,6.4vw,84px) !important; }
+  .sechead__title em, .contact__big em{ font-family:var(--quote) !important; font-style:italic !important; font-weight:400 !important; }
 
   /* ===== WORK cards (positioning version) ===== */
   .pwork__stack{ display:flex; flex-direction:column; gap:clamp(28px,4.5vh,56px); }
@@ -118,7 +125,7 @@
     display:grid; grid-template-columns:1.08fr 0.92fr; gap:clamp(22px,2.6vw,40px) clamp(24px,3vw,48px); align-items:start;
     transition:border-color .4s, transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s; }
   .wcard::before{ content:""; position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .5s;
-    background:radial-gradient(120% 130% at 100% 0, color-mix(in srgb, var(--hot) 11%, transparent), transparent 60%); }
+    background:radial-gradient(70% 90% at 88% 6%, color-mix(in srgb, var(--hot) 22%, transparent), color-mix(in srgb, var(--hot) 6%, transparent) 34%, transparent 62%); }
   .wcard:hover{ border-color:var(--hot); transform:translateY(-3px); box-shadow:0 46px 100px -46px color-mix(in srgb, var(--hot) 55%, transparent); }
   .wcard:hover::before{ opacity:1; }
   .wcard__media{ grid-column:2; grid-row:1; align-self:start; display:block; border-radius:9px; overflow:hidden; aspect-ratio:924/540; background:transparent; }
@@ -158,11 +165,55 @@
   @media (max-width:920px){ .wcard{ grid-template-columns:1fr; } .wcard__media,.wcard__intro,.wcard__lower{ grid-column:auto; grid-row:auto; } }
   @media (max-width:560px){ .wcard__meta, .wcard__cols{ grid-template-columns:1fr; } .wcard__cta{ margin-left:0; } }
 
-  /* ===== JOURNEY: inverted hierarchy (org = header, role = acid subtitle) ===== */
-  .jrny .jstep__org{ display:block; margin:0; font-family:var(--disp); font-weight:700; font-size:clamp(30px,4.6vw,64px); line-height:0.94; letter-spacing:-0.03em; color:#F1EEE7; }
+  /* ===== Instrument Sans replaces Bricolage (display) & Archivo (body) everywhere ===== */
+  :root{ --disp:'Instrument Sans', system-ui, -apple-system, sans-serif; --sans:'Instrument Sans', system-ui, -apple-system, sans-serif; }
+  /* section paragraphs in sentence case, not caps */
+  .lab{ text-transform:none !important; letter-spacing:0.01em !important; font-weight:500 !important; font-size:14px !important; }
+  /* skills: hovered/active title switches to Instrument Serif italic (per UI kit) */
+  .skill.is-active .skill__t{ font-family:var(--quote) !important; font-style:italic !important; font-weight:400 !important; filter:none !important; }
+  /* Selected Work — centred header (like What I do) + tighter, smaller cards */
+  #work .sechead{ flex-direction:column; align-items:center; text-align:center; gap:16px; }
+  #work .sechead__l{ display:flex; flex-direction:column; align-items:center; }
+  #work .chap{ justify-content:center; }
+  #work .sechead .lab{ text-align:center; max-width:52ch; }
+  .pwork__board{ max-width:1180px; margin:0 auto; }
+  .pwork__board .wcard{ padding:clamp(16px,1.6vw,24px); gap:14px; border-radius:14px; }
+  .pwork__board .wcard__media{ aspect-ratio:924/440; }
+  .pwork__board .wcard__title{ font-size:clamp(26px,2.6vw,40px); margin-top:10px; }
+  .pwork__board .wcard__what{ font-size:14.5px; line-height:1.5; margin-top:12px; }
+  .pwork__board .wcard__badge{ font-size:10px; }
+  .pwork__board .wcard__meta{ margin-top:16px; }
+  .pwork__board .wcard__meta > div{ padding:10px 13px; }
+  .pwork__board .wcard__meta dt{ font-size:9.5px; }
+  .pwork__board .wcard__meta dd{ font-size:13px; }
+  /* hover: neutral border + soft shadow only along the bottom (no full-border glow) */
+  .pwork__board .wcard:hover{ border-color:var(--hot); transform:translateZ(40px) translateY(-2px); box-shadow:0 34px 46px -26px color-mix(in srgb, var(--hot) 42%, transparent); }
+  /* ===== SELECTED WORK — draggable 3D board (4 cards) ===== */
+  .pwork__stage{ perspective:1700px; perspective-origin:50% 42%; }
+  .pwork__board{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,2.4vw,38px); transform-style:preserve-3d; will-change:transform; cursor:grab; touch-action:pan-y; }
+  .pwork__board.is-dragging{ cursor:grabbing; }
+  .pwork__board .wcard{ grid-template-columns:1fr; gap:18px; align-content:start; transform-style:preserve-3d; }
+  .pwork__board .wcard__media{ grid-column:1; grid-row:auto; }
+  .pwork__board .wcard__intro{ grid-column:1; grid-row:auto; }
+  .pwork__board .wcard__lower{ grid-column:1; grid-row:auto; justify-content:flex-start; }
+  .pwork__board .wcard:hover{ transform:translateZ(40px) translateY(-2px); }
+  @media (max-width:820px){ .pwork__board{ grid-template-columns:1fr; } }
+  /* ===== JOURNEY: transparent background in both themes, theme-aware text ===== */
+  .jrny{ background:transparent; color:var(--fg); }
+  .jrny .sechead__title{ color:var(--fg); }
+  .jrny .sechead__title em{ color:var(--hot); }
+  .jrny .chap__t{ color:color-mix(in srgb, var(--fg) 66%, transparent); }
+  .jrny .lab{ color:color-mix(in srgb, var(--fg) 58%, transparent); }
+  .jrny .jstep__when{ color:color-mix(in srgb, var(--fg) 52%, transparent); }
+  .jrny .jstep__keys li{ border-color:color-mix(in srgb, var(--fg) 24%, transparent); color:color-mix(in srgb, var(--fg) 78%, transparent); }
+  /* ===== JOURNEY: inverted hierarchy (org = header, gradient appears then fades to solid) ===== */
+  .jrny .jstep__org{ display:block; margin:0; font-family:var(--disp); font-weight:700; font-size:clamp(30px,4.6vw,64px); line-height:1.08; letter-spacing:-0.03em; overflow:visible; padding-bottom:0.14em;
+    background:linear-gradient(90deg,#6522E0,#E01E8F); background-size:220% 100%; background-position:100% 0;
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:var(--fg); color:var(--fg); }
   .jrny .jstep__role{ display:inline-block; margin:16px 0 0; font-family:var(--sans); font-weight:700; font-size:clamp(14px,1.4vw,18px); letter-spacing:0.02em; color:var(--accent2); }
-  .jrny .jstep.is-active .jstep__org{ transition-delay:.30s; }
+  .jrny .jstep.is-active .jstep__org{ transition-delay:.30s; animation:jorgSweepFade 1.9s cubic-bezier(.16,1,.3,1) .30s both; }
   .jrny .jstep.is-active .jstep__role{ transition-delay:.44s; }
+  @keyframes jorgSweepFade{ 0%{ background-position:100% 0; -webkit-text-fill-color:transparent; } 55%{ background-position:0 0; -webkit-text-fill-color:transparent; } 100%{ background-position:0 0; -webkit-text-fill-color:var(--fg); } }
 </style>
 </head>
 <body class="loading">
@@ -200,7 +251,6 @@
     <div class="phero__intro">
       <p class="phero__q">I design <em>products</em> and the systems behind them.</p>
       <p class="phero__lead">Product Designer with an engineering mindset, designing SaaS and platform experiences across UX, interaction, and design systems.</p>
-      <p class="phero__stats"><b>3</b> years &nbsp;·&nbsp; <b>2M+</b> users &nbsp;·&nbsp; <b>24</b>-component system &nbsp;·&nbsp; WCAG AA/AAA</p>
     </div>
   </div>
 </header>
@@ -216,7 +266,7 @@
     </div>
   </div>
   <div class="wrap">
-    <div class="pwork__stack">
+    <div class="pwork__stage"><div class="pwork__board">
       <article class="wcard">
         <a class="wcard__media" href="factile-case-study.html" data-view="Explore" aria-label="Open the Factile Customize case study">
           <span class="workfeat__art workfeat__art--factile" role="img" aria-label="Abstract illustration — the Factile customize flow, untangled from overloaded settings into a clear, guided experience"></span>
@@ -259,7 +309,7 @@
           </div>
         </div>
       </article>
-    </div>
+    </div></div>
     <div class="soon" id="soonMarquee" role="img" aria-label="Next case study — coming soon">
       <div class="soon__track" aria-hidden="true">
         <span>Next case study</span><span class="soon__dot">✦</span><span>Coming soon</span><span class="soon__dot">✦</span><span>Next case study</span><span class="soon__dot">✦</span><span>Coming soon</span><span class="soon__dot">✦</span>
@@ -510,6 +560,7 @@
 <script src="portfolio/pf-skillmodal.js"></script>
 <script src="portfolio/pf-collage.js"></script>
 <script src="portfolio/pf-journey.js"></script>
+<script src="portfolio2026/pf-board.js"></script>
 <script src="portfolio2026/pf-sfx.js"></script>
 <script>(function(){
   if(!window.KSSound) return;
@@ -572,7 +623,5 @@
     b.addEventListener('click', function(){ apply(b.getAttribute('data-theme-set')); });
   });
 })();</script>
-<div id="react-root"></div>
-<script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
